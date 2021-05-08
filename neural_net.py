@@ -148,7 +148,6 @@ class NeuralNet(object):
         '''
         Plots a loss curve
         '''
-
         plt.plot(self.loss)
         plt.xlabel("Iteration")
         plt.ylabel("Loss")
