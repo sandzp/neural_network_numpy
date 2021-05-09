@@ -76,7 +76,6 @@ class NeuralNet(object):
         self.params['Z1'] = Z1
         self.params['Z2'] = Z2
         self.params['A1'] = A1
-
         return yhat, loss
 
     def drelu(self, Z):
@@ -112,6 +111,8 @@ class NeuralNet(object):
         self.params['b1'] = self.params['b1'] - self.learning_rate * dl_wrt_b1
         self.params['b2'] = self.params['b2'] - self.learning_rate * dl_wrt_b2
 
+        return
+
     def fit(self, X, y):
         '''
         Trains the neural network using specified data + labels
@@ -125,7 +126,9 @@ class NeuralNet(object):
             yhat, loss = self.forward_propagation()
             self.backward_propagation(yhat)
             self.loss.append(loss)
-            print("Training epoch {}, calculated loss: {}".format(i, loss))
+            print("Training epoch {}, calculated loss: {}".format(i+1, loss))
+
+        return
 
     def predict(self, X):
         '''
@@ -153,3 +156,4 @@ class NeuralNet(object):
         plt.ylabel("Loss")
         plt.title("Loss Curve for Training")
         plt.show()
+        return
