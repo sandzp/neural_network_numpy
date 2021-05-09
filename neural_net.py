@@ -149,7 +149,7 @@ class NeuralNet(object):
         Plots a loss curve
         '''
         plt.plot(self.loss)
-        plt.xlabel("Iteration")
+        plt.xlabel("Epoch")
         plt.ylabel("Loss")
         plt.title("Loss Curve for Training")
         plt.show()
