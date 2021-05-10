@@ -147,7 +147,7 @@ class NeuralNet(object):
         acc = int(sum(y == yhat) / len(y) * 100)
         return acc
 
-    def plot_loss(self):
+    def plot_loss(self, imagepath = None):
         '''
         Plots a loss curve
         '''
@@ -155,5 +155,10 @@ class NeuralNet(object):
         plt.xlabel("Epoch")
         plt.ylabel("Loss")
         plt.title("Loss Curve for Training")
+
+        if imagepath != None:
+            plt.savefig(fname=imagepath)
+
         plt.show()
+
         return
