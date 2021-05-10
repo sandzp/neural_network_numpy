@@ -8,4 +8,4 @@ Uses hard-coded ReLU and sigmoid functions.
 
 Performs random weight initialization, forward propagation, backwards propagation and cross-entropy loss calculation.
 
-Next goals are to expand it to allow for multi-class prediction and more layers. 
+Next goals are to expand it to allow for multi-class prediction, batching, different activation functions and  more layers. 
